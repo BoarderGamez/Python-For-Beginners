@@ -38,5 +38,9 @@ StartButton = Button(ButtonFrame,text = "Start", font = ("Arial",15),bg ="Light 
 StartButton.grid(column = 0, row= 0, padx=5)
 
 StopButton = Button(ButtonFrame, text = "Reset", font = ("Arial",15),bg= "Red",command=stop)
-StopButton.grid(column= 2, row= 0, padx= 5)
+StopButton.grid(column= 3 ,row= 0, padx= 5)
+
+SmallBreakButton = Button(ButtonFrame, text = "Small Break", font = ("Airal",15),bg = "Light Blue", command = lambda: timer(300))
+SmallBreakButton.grid(column= 1,row= 0, padx = 5)
+BigBreakButton = Button(ButtonFrame, text = "Big Break", font = ("Arial", 15),bg = "Light orange",command = lambda: timer(900))
 root.mainloop()
