@@ -1,11 +1,10 @@
 from tkinter import *
-
+# Init
 root = Tk()
 root.iconbitmap("Tomato.ico")
 root.title("Pomodoro Timer")
-
-
 # Function
+
 
 def timer(time):
     global Stop
@@ -58,4 +57,5 @@ SmallBreakButton.grid(column=1, row=0, padx=5)
 BigBreakButton = Button(ButtonFrame, text="Big Break", font=(
     "Arial", 15), bg="Orange", command=lambda: timer(900))
 BigBreakButton.grid(column=2, row=0, padx=5)
+
 root.mainloop()
