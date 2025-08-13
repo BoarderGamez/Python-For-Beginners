@@ -22,7 +22,7 @@ def timer(time):
     else:
         TimerLabel.config(text="00:00")
 
-
+# Function For Stop Button
 def stop():
     global Stop
     Stop = True
