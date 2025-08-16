@@ -1,6 +1,6 @@
 from tkinter import * # It is import * not import as Tk to make it more simple for example instead of Tk.label, here you write just label
-from tkinter.ttk import Progressbar
-import psutil
+from tkinter.ttk import Progressbar # Progress bar is part of ttk and not tkinter so you will have to do it separately
+import psutil # Psutil
 
 # Initialization of the Tkinter window
 root = Tk()
@@ -9,13 +9,13 @@ root.title("System Monitor") # Naming the title
 
 # Functions
 def updateusage(): # Function to update the progress bars
-    CpuUsage = psutil.cpu_percent() #Fetch the Cpu Percentagefrom Psutil
-    MemUsage = psutil.virtual_memory().percent #F
-    DisUsage = psutil.disk_usage('/').percent
-    CpuBar['value'] = CpuUsage
+    CpuUsage = psutil.cpu_percent() #Fetch the Cpu Percentage from Psutil
+    MemUsage = psutil.virtual_memory().percent #Fetch the Memory Percentage from Psutil
+    DisUsage = psutil.disk_usage('/').percent # Fetch disk Usage from psutil
+    CpuBar['value'] = CpuUsage # Configures the Progressbars to display the usage
     MemoryBar['value'] = MemUsage
     DiskBar['value'] = DisUsage
-    root.after(1000, updateusage)
+    root.after(1000, updateusage) # After 1 second it calls the function; thus refresshing the proggresbars
 # Frame
 TitleFrame = Frame(root)
 TitleFrame.pack()
