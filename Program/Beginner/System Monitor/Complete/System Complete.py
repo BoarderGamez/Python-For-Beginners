@@ -17,7 +17,7 @@ def updateusage(): # Function to update the progress bars
     DiskBar['value'] = DisUsage
     root.after(1000, updateusage) # After 1 second it calls the function; thus refresshing the proggresbars
 # Frame
-TitleFrame = Frame(root)
+TitleFrame = Frame(root) # This is the frame or the "container" which contains all the content
 TitleFrame.pack()
 
 ActivityFrame = Frame(root)
